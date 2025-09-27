@@ -49,6 +49,9 @@
 #             print("游戏失败")
 
 
+"""
+循环案例
+"""
 
 import random
 num=random.randint(1,100)
