@@ -1,3 +1,6 @@
+"""
+精度案例
+"""
 # name="传智播客"
 # stock_price=19.99
 # stock_code="003032"
@@ -6,11 +9,16 @@
 # print(f"公司:{name},股票代码:{stock_code},当前股价:{stock_price}")
 # print("每日增长系数是:%.1f,经过%d天增长后,股价达到%.2f"%(stock_price_daily_growth_factor,growth_days,stock_price*stock_price_daily_growth_factor**growth_days))
 
-
+"""
+输入注释
+"""
 # name=input("hello world\n")
 # print(name)
 
-
+"""
+==比较值
+is比较地址
+"""
 # a='1'
 # b='1'
 # print(a==b)
@@ -178,18 +186,36 @@ range案例
 """
 封装案例
 """
-class Phone:
-    __is_5g_enable=False
-    def __check_5g(self):
-        if self.__is_5g_enable:
-            print("5g开启")
-        else:
-            print("5g关闭,使用4g网络")
-    def call_by_5g(self):
-        self.__check_5g()
-        print("正在通话中")
-    def __init__(self,is_5g):
-        self.__is_5g_enable = is_5g
-phone=Phone(True)
-phone.call_by_5g()
+# class Phone:
+#     __is_5g_enable=False
+#     def __check_5g(self):
+#         if self.__is_5g_enable:
+#             print("5g开启")
+#         else:
+#             print("5g关闭,使用4g网络")
+#     def call_by_5g(self):
+#         self.__check_5g()
+#         print("正在通话中")
+#     def __init__(self,is_5g):
+#         self.__is_5g_enable = is_5g
+# phone=Phone(True)
+# phone.call_by_5g()
 
+"""
+多态案例
+"""
+class Animal:
+    def speak(self):
+        pass
+class Dog(Animal):
+    def speak(self):
+        print("汪汪")
+class Cat(Animal):
+    def speak(self):
+        print("喵喵")
+def make_noise(animal:Animal):
+    animal.speak()
+dog = Dog()
+make_noise(dog)
+cat = Cat()
+cat.speak()
