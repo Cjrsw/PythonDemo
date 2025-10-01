@@ -204,18 +204,62 @@ range案例
 """
 多态案例
 """
-class Animal:
-    def speak(self):
-        pass
-class Dog(Animal):
-    def speak(self):
-        print("汪汪")
-class Cat(Animal):
-    def speak(self):
-        print("喵喵")
-def make_noise(animal:Animal):
-    animal.speak()
-dog = Dog()
-make_noise(dog)
-cat = Cat()
-cat.speak()
+# class Animal:
+#     def speak(self):
+#         pass
+# class Dog(Animal):
+#     def speak(self):
+#         print("汪汪")
+# class Cat(Animal):
+#     def speak(self):
+#         print("喵喵")
+# def make_noise(animal:Animal):
+#     animal.speak()
+# dog = Dog()
+# make_noise(dog)
+# cat = Cat()
+# cat.speak()
+
+"""
+函数条件变量作用域
+"""
+# c=1
+# def a():
+#     b=2
+#     global c
+#     c=3
+#     print(b,c)
+#     return b
+# print(c)
+# a()
+# print(c)
+
+### 函数案例
+money=0
+def find():
+    print(money)
+def get():
+    gets=int(input("请输入取款金额"))
+    global money
+    money-=gets
+    print(f"周杰伦你好，您取款{gets}成功\n您的余额剩余{money}")
+def put():
+    puts=int(input("请输入存款金额"))
+    global money
+    money+=puts
+    print(f"周杰伦你好，您存款{puts}成功\n您的余额剩余{money}")
+
+print("-----------------主菜单-----------------")
+print("周杰伦，你好，欢迎来到黑马银行ATM，请选择操作：\n查询余额\t[输入1]\n存款\t\t[输入2]\n取款\t\t[输入3]\n退出\t\t[输入4]\n请输入你的选择：")
+src=int(input())
+while(src!=4):
+    if src==1:
+        find()
+    elif src==2:
+        put()
+    elif src==3:
+        get()
+    else:
+        break
+    src=int(input())
+print("已退出")
