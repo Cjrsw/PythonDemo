@@ -235,31 +235,44 @@ range案例
 # print(c)
 
 ### 函数案例
-money=0
-def find():
-    print(money)
-def get():
-    gets=int(input("请输入取款金额"))
-    global money
-    money-=gets
-    print(f"周杰伦你好，您取款{gets}成功\n您的余额剩余{money}")
-def put():
-    puts=int(input("请输入存款金额"))
-    global money
-    money+=puts
-    print(f"周杰伦你好，您存款{puts}成功\n您的余额剩余{money}")
+# money=0
+# def find():
+#     print(money)
+# def get():
+#     gets=int(input("请输入取款金额"))
+#     global money
+#     money-=gets
+#     print(f"周杰伦你好，您取款{gets}成功\n您的余额剩余{money}")
+# def put():
+#     puts=int(input("请输入存款金额"))
+#     global money
+#     money+=puts
+#     print(f"周杰伦你好，您存款{puts}成功\n您的余额剩余{money}")
+#
+# print("-----------------主菜单-----------------")
+# print("周杰伦，你好，欢迎来到黑马银行ATM，请选择操作：\n查询余额\t[输入1]\n存款\t\t[输入2]\n取款\t\t[输入3]\n退出\t\t[输入4]\n请输入你的选择：")
+# src=int(input())
+# while(src!=4):
+#     if src==1:
+#         find()
+#     elif src==2:
+#         put()
+#     elif src==3:
+#         get()
+#     else:
+#         break
+#     src=int(input())
+# print("已退出")
 
-print("-----------------主菜单-----------------")
-print("周杰伦，你好，欢迎来到黑马银行ATM，请选择操作：\n查询余额\t[输入1]\n存款\t\t[输入2]\n取款\t\t[输入3]\n退出\t\t[输入4]\n请输入你的选择：")
-src=int(input())
-while(src!=4):
-    if src==1:
-        find()
-    elif src==2:
-        put()
-    elif src==3:
-        get()
-    else:
-        break
-    src=int(input())
-print("已退出")
+
+#循环定义列表
+list1=[]
+index=0
+while index<len(list1):
+    print(list1[index])
+    index+=1
+for i in list1:
+    print(i)
+#for 临时变量 in 数据容器
+#    对临时变量进行处理
+#差别：for不能自定义循环条件，无限循环，while可以
