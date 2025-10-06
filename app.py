@@ -266,13 +266,21 @@ range案例
 
 
 #循环定义列表
-list1=[]
-index=0
-while index<len(list1):
-    print(list1[index])
-    index+=1
-for i in list1:
-    print(i)
+# list1=[]
+# index=0
+# while index<len(list1):
+#     print(list1[index])
+#     index+=1
+# for i in list1:
+#     print(i)
 #for 临时变量 in 数据容器
 #    对临时变量进行处理
 #差别：for不能自定义循环条件，无限循环，while可以
+
+
+#序列
+# a="12,34,56,78,9"
+# b=a.split(",")[1].replace("3","0")[::-1]
+# print(b)
+a=("1",)
+print(type(a))
