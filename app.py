@@ -1,6 +1,9 @@
 """
 精度案例
 """
+import time
+from os.path import split
+
 # name="传智播客"
 # stock_price=19.99
 # stock_code="003032"
@@ -8,7 +11,7 @@
 # growth_days=7
 # print(f"公司:{name},股票代码:{stock_code},当前股价:{stock_price}")
 # print("每日增长系数是:%.1f,经过%d天增长后,股价达到%.2f"%(stock_price_daily_growth_factor,growth_days,stock_price*stock_price_daily_growth_factor**growth_days))
-
+#print("我是%c,%s"%("hw","world"))
 """
 输入注释
 """
@@ -282,5 +285,90 @@ range案例
 # a="12,34,56,78,9"
 # b=a.split(",")[1].replace("3","0")[::-1]
 # print(b)
-a=("1",)
-print(type(a))
+#a=("1",)
+#print(type(a))
+
+
+
+
+# from gmssl import sm2, func
+# import hashlib
+#
+# sm2_cry = sm2.CryptSM2(
+#     public_key='04f65bd45c99b136f14375c3b7fb97dc5008e6f85233b11d5c40b4d50bd09ae83dc4f1d27b3fe9f292e0ba25aaf0bc6ced9efd180f04a4f55ab54b916959cb7fdb',  # 填入获取到的公钥
+#     private_key='', # 不需要私钥
+#     ecc_table=sm2.default_ecc_table, mode=1
+# )
+#
+# plain_text = "R7czTnCHYmpoe36x"  # 明文密码
+#
+#
+# md5 = hashlib.md5()
+# md5.update(plain_text.encode("utf-8"))
+# md5_pwd = md5.hexdigest()
+#
+# enc_data = sm2_cry.encrypt(md5_pwd.encode("utf-8")).hex()
+# print("密钥是:\n"+enc_data)
+
+
+#f=open("密钥使用文档.md","r",encoding="utf-8")
+
+
+
+# 文件上传
+# print(f.read(10))
+# print(f.readline())
+# print(f.readlines())
+
+
+"""
+文件上传
+"""
+# for line in f:
+#     print(f"每一行数据是：{line}")
+# f.close()
+# time.sleep(5)
+# with open("密钥使用文档.md","r",encoding="utf-8") as f:
+#     print(f.read(10))
+# time.sleep(50000)
+
+# fs=open("Mac.txt","r",encoding="utf-8")
+# c=0
+# for line in fs:
+#     a=line.strip().split()
+#     print(a)
+#     for b in a:
+#         if b=="itheima":
+#             c+=1
+# print(f"itheima出现了{c}次")
+# fss=open("Mac.txt","r",encoding="utf-8")
+# count=fss.read().count("itheima")
+# print(f"itheima出现了{count}次")
+# fs.close()
+# fss.close()
+#
+#
+#
+#
+"""
+item"""
+# w=open("Mac.txt","r",encoding="utf-8")
+# w.write("hello world")
+# f.close()
+# time.sleep(50000)
+
+# data = {"name": "张三", "age": 30}
+# print( type(data.items()))
+# for k,v in data.items():
+#     print(k,v)
+"""模块导入"""
+import time
+print("hello me")
+time.sleep(5)
+a=time.localtime()
+#格式化
+print(time.strftime("%Y-%m-%d %H:%M:%S",a))
+### 自定义模块
+print(time.strftime("%m%d%H%M",a))
+print(time.time())
+
